@@ -1,187 +1,207 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Merriweather+Sans:wght@500;600;700&family=Nunito:wght@200&family=Public+Sans:wght@100&family=Roboto:wght@300;400;500&family=Ubuntu:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Merriweather+Sans:wght@500;600;700&family=Nunito:wght@200&family=Public+Sans:wght@100&family=Roboto:wght@300;400;500&family=Ubuntu:wght@400;500;700&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background: #000000;
+  --purple: #8257e5;
+  --white: #ffffff;
 }
 
 /*xxxxxxx    Nav   xxxxxxx*/
 .container {
-    background: #000000;
-    width: 1360px;
-    height: 768px;
-    margin: 60px auto;
-    padding: 45px 0px 0px 115px;
+  background: var(--background);
+  width: 1360px;
+  height: 768px;
+  margin: 60px auto;
+  padding: 45px 0px 0px 115px;
 }
 
 .nav {
-    color: #FFFFFF;
-    display: flex;
-    justify-content: space-around;
-    width: 920px;
-    height: 50px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 920px;
+  height: 50px;
 }
 
 ul {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-li  {
-    list-style: none;
-    margin: 20px;
-    
+li {
+  list-style: none;
+  margin: 20px;
 }
 
 a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 15px;
-    font-family: 'Manrope', sans-serif;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 15px;
+  font-family: "Manrope", sans-serif;
+  transition: color 0.3s ease;
 }
 a:hover {
-    color: #8257E5;
+  color: var(--purple);
 }
 .text {
-    display: none;
+  display: none;
 }
 
 button {
-    background: none;
-    border: 1px solid #8257E5;
-    color: #FFFFFF;
-    border-radius: 10px;
-    padding: 20px;
-    font-size: 15px;
-    font-family: 'Manrope', sans-serif;
-    transition: all 0.03s ease;   
+  background: none;
+  border: 1px solid var(--purple);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 15px 20px 15px 20px;
+  font-size: 12px;
+  font-family: "Manrope", sans-serif;
+  transition: all 0.03s ease;
 }
 button:hover {
-    color: #8257E5;
+  color: var(--purple);
 }
 /*xxxxxxx    gCoffee   xxxxxxx*/
 .gcoffee {
-    font-size: 80px;
-    font-family: 'Manrope', sans-serif;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-
+  font-size: 80px;
+  font-family: "Manrope", sans-serif;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 /*xxxxxxx    gCode  xxxxxxx*/
 
 .gcode {
-    -webkit-text-stroke: 2px #8257E5;     /*assim colocamos só a borda pra aparecer  */
-    font-family: 'Marope', sans-serif;
-    display: flex;
-    justify-content: center;
-    font-size: 80px;
-    margin-top: 10px;
-
-} 
+  -webkit-text-stroke: 2px var(--purple); /*assim colocamos só a borda pra aparecer  */
+  font-family: "Marope", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 80px;
+  margin-top: 10px;
+}
 /*xxxxxxx    Copo   xxxxxxx*/
 .copo {
-    display: flex;
-    margin-top: 10px;
-    margin-left: 110px;
-    position: fixed;
-    z-index: 999;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 110px;
+  position: fixed;
+  z-index: 999;
 }
 /*xxxxxxx    Copo   xxxxxxx*/
 footer {
-    font-family: 'Times New Roman', Times, serif;
-    display: flex;
-    margin-left: 1130px;
-    margin-top: 390px;
-    color: #ffffff;
-
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  margin-left: 1130px;
+  margin-top: 390px;
+  color: var(--white);
 }
 /*xxxxxxx    responsivo   xxxxxxx*/
-@media (max-width: 1100px){
-    .container {
-        width: 1000;
-        padding: 0.50px;
-    } body {
-        width: 50%;
-        height: 50vh;
-        left: 0;
-        top: 0;
-    }
-    .copo {
-        margin-left: -5px;
-        margin-top: 55px;    
-    }
-    .nav {
-        padding-top: 30px;
-    }
-    .gcoffee, .gcode {
-        margin-left: -410px;
-    }
+@media (max-width: 1360px) {
+  .container {
+    width: 1200px;
+    margin: 60px 60px;
+    padding: 5px 0px 1px 125px;
+  }
+  .nav {
+    padding-top: 30px;
+  }
+  .gcoffee,
+  .gcode {
+    margin-left: -110px;
+  }
+  .copo {
+    margin-left: 45px;
+    margin-top: 53px;
+  }
+  footer {
+    margin-left: 970px;
+    margin-top: 420px;
+  }
 }
-@media (max-width: 882px){
-    .container {
-        width: 800;
-        padding: 0.50px;    
-    }
-    .nav ul {
-        display: none;  
-    }
+@media (max-width: 1260px) {
+  .container {
+    width: 1000px;
+    margin: 60px 30px;
+    padding: 5px 5px 1px 25px;
+  }
+  footer {
+    margin-left: 870px;
+  }
 }
-@media (max-width: 752px){
-    .container {
-        width: 500px;
-        padding: 0.50px;
-    } 
-    .copo {
-        margin-left: -135px;
-        width: 5px;
-        position: relative;
-        margin-top: 155px;
-    }
-    .copo img {
-        
-        height: 300px;
-        margin-bottom: 1800px;
-    }
-    .gcoffee, .gcode {
-        margin-left: -170px;
-    }
-    .gcode {
-        margin-top: 13px;
-
-    }
-    button {
-        display: none;
-    }
-    .nav img {
-        width: 200px;
-        height: 80px;
-        margin-left: -670px;        
-    }
+@media (max-width: 1020px) {
+  .container {
+    width: 940px;
+    margin: 60px 30px;
+  }
+  .nav ul {
+    display: none;
+  }
+  footer {
+    margin-left: 800px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 970px) {
+  .container {
+    width: 840px;
+  }
+  .copo {
+    margin-left: -135px;
+    width: 5px;
+    margin-top: 155px;
+  }
+  .copo img {
+    height: 300px;
+    margin-left: 230px;
+    margin-top: -38px;
+  }
+  .gcoffee,
+  .gcode {
+    margin-top: 80px;
+    margin-left: -70px;
+  }
+  .gcode {
+    margin-top: 13px;
+  }
+  button {
+    display: none;
+  }
+  .nav img {
+    width: 100px;
+    height: 50px;
+    margin-left: -170px;
+  }
+  footer {
+    margin-left: 700px;
+    margin-top: 390px;
+  }
+}
+@media (max-width: 850px) {
+  .container {
+    width: 640px;
+  }
+  .copo img {
+    height: 300px;
+    margin-left: 130px;
+    margin-top: -58px;
+  }
+  .gcoffee {
+    margin-top: 100px;
+    margin-left: 5px;
+  }
+  .gcode {
+    margin-left: 5px;
+  }
+  .nav img {
+    height: 70px;
+    margin-left: -270px;
+  }
+  footer {
+    margin-left: 500px;
+    margin-top: 370px;
+  }
+}
